@@ -1,0 +1,484 @@
+<script>resizeTo(screen.availWidth, screen.availHeight);</script> 
+
+<style>
+body{
+background-image: url('https://i.imgur.com/wrnygKL.gif') !important; 
+background-repeat:repeat !important; 
+background-position:center !important; 
+background-color:#000000;
+}
+
+::-webkit-scrollbar {width: 4px; height: 4px;}
+::-webkit-scrollbar-track {background: none;}
+::-webkit-scrollbar-thumb {background: #00002A;}
+
+#box1 {
+position:absolute;
+background-color:rgba(8, 0, 82, 0.61);
+width:18%;
+height:50%;
+top:25%;
+left:26%;
+}
+
+#box2 {
+position:absolute;
+background-color:rgba(8, 0, 82, 0.61);
+width:18%;
+height:42%;
+top:25%;
+left:45%;
+}
+
+#pic {
+position:absolute;
+width:18%;
+height:42%;
+top:25%;
+left:45%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#pic:hover {
+opacity:0;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#title {
+position:absolute;
+background-color:#000034;
+width:10%;
+height:5%;
+top:25%;
+left:64%;
+text-align:center;
+color:#BDFFFF;
+font-family: 'Alegreya Sans SC', sans-serif;
+font-size:1.5vh;
+line-height:3.5;
+}
+
+#moon {
+position:absolute;
+width:11%;
+height:22%;
+top:39%;
+left:63.7%;
+border-radius:100%;
+background-image: url('https://i.imgur.com/73CMikN.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+}
+
+#pictab3 {
+position:absolute;
+background-color:rgba(44, 3, 27, 0.81);
+width:18%;
+height:2%;
+top:71%;
+left:45%;
+}
+
+#picicon1 {
+position:absolute;
+width:3%;
+height:6%;
+top:69%;
+left:45%;
+background-image: url('https://i.imgur.com/QFeOmTp.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+}
+
+#picicon2 {
+position:absolute;
+width:3%;
+height:6%;
+top:69%;
+left:52.5%;
+background-image: url('https://i.imgur.com/oC3AK1A.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+}
+
+#picicon3 {
+position:absolute;
+width:3%;
+height:6%;
+top:69%;
+left:60%;
+background-image: url('https://i.imgur.com/HB0jVFh.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+}
+
+#borderbox1 {
+position:absolute;
+border:1px solid #4A2139;
+border-right:none;
+width:4%;
+height:46%;
+top:27%;
+left:27%;
+}
+
+#borderbox2 {
+position:absolute;
+border:1px solid #4A2139;
+border-left:none;
+width:4%;
+height:46%;
+top:27%;
+left:39%;
+}
+
+#content {
+position:absolute;
+padding:2%;
+overflow:auto;
+background-color:#000034;
+width:10%;
+height:34%;
+top:29%;
+left:28%;
+color:#ffffff;
+font-size:1.5vh;
+font-family: 'Advent Pro', sans-serif;
+}
+
+#borderbox3 {
+position:absolute;
+border:1px solid #4A2139;
+border-right:none;
+width:4%;
+height:37.7%;
+top:27%;
+left:46%;
+}
+
+#borderbox4 {
+position:absolute;
+border:1px solid #4A2139;
+border-left:none;
+width:4%;
+height:37.7%;
+top:27%;
+left:58%;
+}
+
+#basics {
+position:absolute;
+padding:2%;
+overflow:auto;
+background-color:#000034;
+width:10%;
+height:25.7%;
+top:29%;
+left:47%;
+color:#ffffff;
+font-size:1.5vh;
+font-family: 'Advent Pro', sans-serif;
+text-align:center;
+}
+
+#tabbox1 {
+position:absolute;
+background-color:rgba(44, 3, 27, 0.81);
+width:1%;
+height:44%;
+top:25%;
+left:64%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox2 {
+position:absolute;
+background-color:rgba(44, 3, 27, 0.81);
+width:1%;
+height:46%;
+top:25%;
+left:65.5%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox3 {
+position:absolute;
+background-color:rgba(44, 3, 27, 0.81);
+width:1%;
+height:48%;
+top:25%;
+left:67%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox4 {
+position:absolute;
+background-color:rgba(44, 3, 27, 0.81);
+width:1%;
+height:50%;
+top:25%;
+left:68.5%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox5 {
+position:absolute;
+background-color:rgba(44, 3, 27, 0.81);
+width:1%;
+height:48%;
+top:25%;
+left:70%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox6 {
+position:absolute;
+background-color:rgba(44, 3, 27, 0.81);
+width:1%;
+height:46%;
+top:25%;
+left:71.5%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox7 {
+position:absolute;
+background-color:rgba(44, 3, 27, 0.81);
+width:1%;
+height:44%;
+top:25%;
+left:73%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox1:hover,#tabbox2:hover,#tabbox3:hover,#tabbox4:hover,#tabbox5:hover,#tabbox6:hover,#tabbox7:hover {
+background-color:#000034;
+height:50%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+.tabs{
+display:inline-block;
+width:100%;
+height:100%;
+text-align:right;
+color:#7C536B;
+font-family: 'Advent Pro', sans-serif;
+text-transform:uppercase;
+writing-mode: vertical-rl;
+text-orientation: sideways;
+font-size:2vh;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+.tabs1 {
+display:block;
+width:100%;
+height:100%;
+background-color:rgba(0, 0, 0, 0.71);
+opacity:0;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+.tabs1:hover {
+opacity:1;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tab1,#tab2,#tab3,#tab4,#tab5,#tab6,#tab7,#tab8,#tab9,#tab10 {
+display: none;
+}
+
+h1 {
+color:#4A2139;
+font-family: 'Alegreya Sans SC', sans-serif;
+background-color:#7CADB4;
+border-bottom:1px solid #4A2139;
+text-align:center;
+font-size:3vh;
+}
+
+i {
+color:#666666;
+}
+
+a {
+color:#7C536B;
+text-decoration:none;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+a:hover {
+color:#666666;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+b {
+color:#4A2139;
+background-color:#7C536B;
+font-family: 'Alegreya Sans SC', sans-serif;
+}
+</style>
+
+<style type="text/css">* {cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur819.cur), auto !important;}</style>
+<link href="https://fonts.googleapis.com/css?family=Advent+Pro|Alegreya+Sans+SC" rel="stylesheet">
+<script>function changeNavigation(id) {document.getElementById('content').innerHTML=document.getElementById(id).innerHTML}</script>
+<script>function changeNavigation1(id) {document.getElementById('pic').innerHTML=document.getElementById(id).innerHTML}</script>
+
+<div id="box1"></div>
+<div id="borderbox1"></div>
+<div id="borderbox2"></div>
+<div id="content">
+<b>Bold</b><br>
+<i>Italic</i><br>
+<a target="_blank" href="">Link</a><br>
+Normal.
+<br><br>
+Picture buttons change image.<br>
+Banner tabs change text.<br>
+Hover mouse over picture to see basic stats.
+</div>
+<div id="box2"></div>
+<div id="borderbox3"></div>
+<div id="borderbox4"></div>
+<div id="basics">
+<b>Name:</b> ???<br>
+<b>Age:</b> ???<br>
+<b>Gender:</b> ???<br>
+<b>Sexuality:</b> ???<br>
+<b>Species:</b> ???<br>
+<b>Race:</b> ???<br>
+<b>Primary Tree:</b> ???<br>
+<b>Secondary Tree:</b> ???<br>
+<b>Rank(s):</b> ???<br>
+<b>Occupation:</b> ???<br>
+<b>Height:</b> ???<br>
+<b>Weight:</b> ???
+</div>
+<div id="pic">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/FGNbnHc.png"/>
+</div>
+<div id="box3"></div>
+<div id="pictab3"></div>
+<div id="picicon1">
+<span class="tabs1" onClick="changeNavigation1 ('tab1')"></span>
+</div>
+<div id="picicon2">
+<span class="tabs1" onClick="changeNavigation1 ('tab2')"></span>
+</div>
+<div id="picicon3">
+<span class="tabs1" onClick="changeNavigation1 ('tab3')"></span>
+</div>
+<div id="tabbox1">
+<span class="tabs" onClick="changeNavigation ('tab4')">Details</span>
+</div>
+<div id="tabbox2">
+<span class="tabs" onClick="changeNavigation ('tab5')">History</span>
+</div>
+<div id="tabbox3">
+<span class="tabs" onClick="changeNavigation ('tab6')">Inventory</span>
+</div>
+<div id="tabbox4">
+<span class="tabs" onClick="changeNavigation ('tab7')">Racials</span>
+</div>
+<div id="tabbox5">
+<span class="tabs" onClick="changeNavigation ('tab8')">Primary</span>
+</div>
+<div id="tabbox6">
+<span class="tabs" onClick="changeNavigation ('tab9')">Secondary</span>
+</div>
+<div id="tabbox7">
+<span class="tabs" onClick="changeNavigation ('tab10')">Credits</span>
+</div>
+<div id="title">
+❝ May the stars guide you. ❞
+</div>
+<div id="circle"></div>
+<div id="moon"></div>
+
+<div id="tab1">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/DUVJBAI.png"/>
+</div>
+<div id="tab2">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/TfjmJkG.png"/>
+</div>
+<div id="tab3">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/FGNbnHc.png"/>
+</div>
+
+<div id="tab4">
+<b>Bold</b><br>
+<i>Italic</i><br>
+<a target="_blank" href="">Link</a><br>
+Normal.
+<br><br>
+Picture buttons change image.<br>
+Banner tabs change text.<br>
+Hover mouse over picture to see basic stats.
+</div>
+<div id="tab5">
+<b>"History"</b>
+</div>
+<div id="tab6">
+<b>"Inventory"</b>
+</div>
+<div id="tab7">
+<b>"Racials"</b>
+</div>
+<div id="tab8">
+<b>"Primary"</b>
+</div>
+<div id="tab9">
+<b>"Secondary"</b>
+</div>
+<div id="tab10">
+<b>Image Sources:</b><br>
+<a target="_blank" href="https://www.pinterest.com/pin/523754631638949896/?lp=true">Background</a><br>
+<a target="_blank" href="https://plus.google.com/photos/photo/112264316231805935489/6592582638581572706">Moon Image</a><br>
+<a target="_blank" href="https://kittydoom.tumblr.com/post/166589110471/theartofanimation-little-paper-forest">Moon Goddess 1</a><br>
+<a target="_blank" href="https://www.pinterest.com/pin/498844096218041793/">Moon Goddess 2</a><br>
+<a target="_blank" href="http://safebooru.org/index.php?page=post&s=view&id=2418341">Moon Goddess 3</a><br><br>
+<b>Cursor:</b><br>
+<a target="_blank" href="http://cursors-4u.com">Cursors-4u</a><br><br>
+<b>Music:</b><br>
+<a target="_blank" href="https://www.youtube.com/watch?v=Li7FOgZ3EaA">Witch of the Woods | God of War OST</a><br><br>
+<b>Theme Creator & Title:</b><br>
+"Night Clan" by <a target="_blank" href="http://fae.chatango.com">Fae</a><br><br>
+Permitted for free use by <a target="_blank" href="http://ulreich.weebly.com">Ulreich University</a> participants <i>only</i>.
+</div>
+
+<embed style="height: 0%; width: 0%;"src="Moon.mp3" autostart="true" loop="true">
